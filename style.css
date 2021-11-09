@@ -1,0 +1,177 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+}
+#header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+#header .logo
+{
+    color: #094b65;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+section::before 
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #094b65,transparent);
+    z-index: 10;
+}
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section #text 
+{
+    position: absolute;
+    color: #094b65;
+    font-size: 12vh;
+    text-align: center;
+    line-height: 0.80em;
+    transform: translateY(-50%);
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+section #text span 
+{
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.sec 
+{
+    position: relative;
+    padding: 100px;
+    background: #094b65;
+    display: flex;
+    
+}
+#prueba h2
+{
+    font-size: 2.5em;
+    color: #094b65;
+    margin-bottom: 10px;
+}
+#prueba p 
+{
+    font-size: 1em;
+    color: #094b65;
+}
+#container 
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #094b656c;
+    height: auto;
+    width: 33%;
+    border-radius: 50%;
+    background:#089eda33;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    animation: flotar 2s linear infinite alternate;
+    font-family: 'Zen Kurenaido', sans-serif;
+    
+}
+@keyframes flotar {
+    to {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        
+    }
+    
+}
+.imagen
+{
+    height: 250px;
+    width: 250px;
+    border-radius: 20%;
+    
+}
+.burbujas div {
+    background: rgb(46, 141, 185);
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    animation: animarburbujas 4s linear infinite;
+}
+.burbujas div:nth-child(1) {
+    width: 35px;
+    height: 32px;
+    left: 10px;
+    animation-duration: 4s;
+}
+.burbujas div:nth-child(2) {
+    width: 15px;
+    height: 25px;
+    left: 25%;
+    animation-duration: 9s;
+}
+.burbujas div:nth-child(3) {
+    width: 25px;
+    height: 25px;
+    left: 40%;
+    animation-duration: 3s;
+}
+.burbujas div:nth-child(4) {
+    width: 33px;
+    height: 33px;
+    left: 75%;
+    animation-duration: 6s;
+}
+@keyframes animarburbujas {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    3% 
+    {
+        width: 30px;
+        height: 30px;
+    }
+    100% 
+    {
+        bottom: 90vh;
+    }
+}
